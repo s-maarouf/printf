@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <string.h>
 
 /**
 * struct convert - defines a structure for symbols and functions
@@ -26,6 +27,9 @@ int print_integer(va_list list);
 int unsigned_integer(va_list list);
 int print_binary(va_list list);
 int _putchar(char c);
+void _putstr(char *str);
+char *rev_string(char *s);
+unsigned int base_len(unsigned int num, int base);
 int parser(const char *format, conver_t f_list[], va_list arg_list);
 
 
