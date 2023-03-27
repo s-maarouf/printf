@@ -9,44 +9,24 @@
  */
 int _printf(const char *format, ...)
 {
-	int chars_printed = 0;
-	va_list args;
+	int printed_chars;
+	conver_t f_list[] = {
+		{"c", _print_char},
+		{"s", _print_str},
+		{"%", print_percent},
+		{"d", print_integer},
+		{"i", print_integer},
+		{"u", unsigned_integer},
+		{NULL, NULL}
+	};
+	va_list arg_list;
 
-	va_start(args, format);
-	while (*format)
-	{
-		if (*format == '%')
-		{
-			format++;
+	if (format == NULL)
+		return (-1);
 
-			if (*format == '%')
-			{
-				chars_printed += _print_percent();
-			}
-			else if (*format == 'c')
-			{
-				char c = (char)va_arg(args, int);
-				chars_printed += _print_char(c);
-			}
-			else if (*format == 's')
-			{
-				const char *s = va_arg(args, const char *);
-				chars_printed += _print_str(s);
-			}
-			else if (*format == 'd' || *format == 'i')
-			{
-				int num = va_arg(args, int);
-				chars_printed += _print_num(num);
-			}
-		}
-		else
-		{
-			chars_printed += _print_char(*format);
-		}
-		format++;
-	}
-
-	va_end(args);
-
-	return (chars_printed);
+	va_start(arg_list, format);
+	/*Calling parser function*/
+	printed_chars = parser(format, f_list, arg_list);
+	va_end(arg_list);
+	return (printed_chars);
 }

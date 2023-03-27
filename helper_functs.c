@@ -1,73 +1,75 @@
 #include "main.h"
 
 /**
- * _print_percent - Prints a single percent character
- *
- * Return: Always returns 1
- */
-int _print_percent(void)
-{
-	return (_putchar('%'));
-}
-
-/**
  * _print_char - Prints a single character
- * @c: The character to be printed
+ * @list: list of arguments
  *
  * Return: Always returns 1
  */
-int _print_char(char c)
+int _print_char(va_list list)
 {
-	write(1, &c, 1);
+	_putchar(va_arg(list, int));
 	return (1);
 }
 
 /**
  * _print_str - Prints a string of characters
- * @s: The string to be printed
+ * @list: list of arguments
  *
  * Return: The number of characters printed
  */
-int _print_str(const char *s)
+int _print_str(va_list list)
 {
-	int len = 0;
+	int i;
+	char *str;
 
-	while (s[len])
-	{
-		len++;
-	}
-
-	write(1, s, len);
-	return (len);
+	str = va_arg(list, char *);
+	if (str == NULL)
+		str = "(null)";
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
 }
 
 /**
- * _print_num - Prints an integer
- * @nb: The integer to be printed
- *
- * Return: The number of characters printed
+ * print_percent - Prints a percent symbol
+ * @list: list of arguments
+ * Return: Will return the amount of characters printed.
  */
-int _print_num(int nb)
+int print_percent(__attribute__((unused))va_list list)
 {
-	if (nb == -2147483648)
-	{
-		_putchar('-');
-		_putchar('2');
-		_print_num(147483648);
-	}
-	else if (nb < 0)
-	{
-		_putchar('-');
-		nb = -nb;
-		_print_num(nb);
-	}
-	else if (nb > 9)
-	{
-		_print_num(nb / 10);
-		_print_num(nb % 10);
-	}
-	else
-		_putchar(nb + 48);
+	_putchar('%');
+	return (1);
+}
 
-	return (nb);
+/**
+ * print_integer - Prints an integer
+ * @list: list of arguments
+ * Return: Will return the amount of characters printed.
+ */
+int print_integer(va_list list)
+{
+	int num_length;
+
+	num_length = print_number(list);
+	return (num_length);
+}
+
+/**
+ * unsigned_integer - Prints Unsigned integers
+ * @list: List of all of the argumets
+ * Return: a count of the numbers
+ */
+int unsigned_integer(va_list list)
+{
+	unsigned int num;
+
+	num = va_arg(list, unsigned int);
+
+	if (num == 0)
+		return (print_unsgined_number(num));
+
+	if (num < 1)
+		return (-1);
+	return (print_unsgined_number(num));
 }
