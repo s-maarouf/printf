@@ -24,6 +24,7 @@ int _print_char(va_list list);
 int _print_str(va_list list);
 int print_integer(va_list list);
 int unsigned_integer(va_list list);
+int print_binary(va_list list);
 int _putchar(char c);
 int parser(const char *format, conver_t f_list[], va_list arg_list);
 
