@@ -31,6 +31,8 @@ int print_hex(va_list list);
 int print_heX(va_list list);
 int print_octal(va_list list);
 int print_pointer(va_list list);
+int print_reversed(va_list arg);
+int rot13(va_list list);
 
 
 
@@ -42,5 +44,6 @@ int parser(const char *format, conver_t f_list[], va_list arg_list);
 int print_unsgined_number(unsigned int n);
 int print_number(va_list args);
 int hex_check(int num, char x);
+char *rev_string(char *s);
 
 #endif
