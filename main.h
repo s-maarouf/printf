@@ -7,6 +7,8 @@
 #include <string.h>
 #include <stdio.h>
 
+#define BUFFER_SIZE 1024
+
 /**
 * struct convert - defines a structure for symbols and functions
 *
@@ -46,5 +48,6 @@ int print_unsgined_number(unsigned int n);
 int print_number(va_list args);
 int hex_check(int num, char x);
 char *rev_string(char *s);
+int _putchar_buff(char c);
 
 #endif
