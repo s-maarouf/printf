@@ -46,22 +46,19 @@ int print_S(va_list list)
 	if (str == NULL)
 		str = "(null)";
 
-	while (*str)
+	for (; *str; str++)
 	{
 		if (*str < 32 || *str >= 127)
 		{
 			count += _putchar('\\');
 			count += _putchar('x');
-			count += _putchar('0');
-			count += _putchar('0' + (*str / 16));
-			count += _putchar('0' + (*str % 16));
+			count += _putchar(*str / 16 + (*str / 16 > 9 ? 'A' - 10 : '0'));
+			count += _putchar(*str % 16 + (*str % 16 > 9 ? 'A' - 10 : '0'));
 		}
 		else
 		{
 			count += _putchar(*str);
 		}
-
-		str++;
 	}
 
 	return (count);
