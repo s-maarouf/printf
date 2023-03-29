@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{"x", print_hex},
 		{"X", print_heX},
 		{"o", print_octal},
+		{"p", print_pointer},
 		{NULL, NULL}
 	};
 	va_list arg_list;

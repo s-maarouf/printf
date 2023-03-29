@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* rev_string - reverses a string in place
-*
-* @s: string to reverse
-* Return: A pointer to a character
-*/
+ * rev_string - reverses a string in place
+ *
+ * @s: string to reverse
+ * Return: A pointer to a character
+ */
 char *rev_string(char *s)
 {
 	int len;
@@ -14,7 +14,8 @@ char *rev_string(char *s)
 	char *dest;
 
 	for (len = 0; s[len] != '\0'; len++)
-	{}
+	{
+	}
 
 	dest = malloc(sizeof(char) * len + 1);
 	if (dest == NULL)
@@ -31,13 +32,13 @@ char *rev_string(char *s)
 }
 
 /**
-* base_len - Calculates the length for an octal number
-*
-* @num: The number for which the length is being calculated
-* @base: Base to be calculated by
-*
-* Return: An integer representing the length of a number
-*/
+ * base_len - Calculates the length for an octal number
+ *
+ * @num: The number for which the length is being calculated
+ * @base: Base to be calculated by
+ *
+ * Return: An integer representing the length of a number
+ */
 unsigned int base_len(unsigned int num, int base)
 {
 	unsigned int i;
@@ -47,4 +48,21 @@ unsigned int base_len(unsigned int num, int base)
 		num = num / base;
 	}
 	return (i);
+}
+
+/**
+ * print_pointer - prints a pointer's memory address in hexadecimal notation
+ * @list: argument list containing the pointer to be printed
+ *
+ * Return: number of characters printed
+ */
+int print_pointer(va_list list)
+{
+	void *ptr = va_arg(list, void *);
+	char buffer[1024];
+	int count;
+
+	count = sprintf(buffer, "%p", ptr);
+	write(1, buffer, count);
+	return (count);
 }

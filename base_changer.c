@@ -35,7 +35,7 @@ int print_binary(va_list list)
 	rev_str = rev_string(str);
 	if (rev_str == NULL)
 		return (-1);
-	_putstr(rev_str);
+	_puts(rev_str);
 	free(str);
 	free(rev_str);
 	return (len);
@@ -80,7 +80,7 @@ int print_hex(va_list list)
 	rev_hex = rev_string(hex_rep);
 	if (rev_hex == NULL)
 		return (-1);
-	_putstr(rev_hex);
+	_puts(rev_hex);
 	free(hex_rep);
 	free(rev_hex);
 	return (len);
@@ -126,7 +126,7 @@ int print_heX(va_list list)
 	rev_hex = rev_string(hex_rep);
 	if (rev_hex == NULL)
 		return (-1);
-	_putstr(rev_hex);
+	_puts(rev_hex);
 	free(hex_rep);
 	free(rev_hex);
 	return (len);
@@ -185,7 +185,7 @@ int print_octal(va_list list)
 	if (rev_str == NULL)
 		return (-1);
 
-	_putstr(rev_str);
+	_puts(rev_str);
 	free(octal_rep);
 	free(rev_str);
 	return (len);
