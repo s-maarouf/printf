@@ -33,6 +33,7 @@ int print_octal(va_list list);
 int print_pointer(va_list list);
 int print_reversed(va_list arg);
 int rot13(va_list list);
+int print_S(va_list list);
 
 
 
