@@ -25,6 +25,9 @@ int _printf(const char *format, ...)
 		{"r", print_reversed},
 		{"R", rot13},
 		{"S", print_S},
+		{"+", print_plus},
+		{" ", print_space},
+		{"#", print_prefix},
 		{NULL, NULL}
 	};
 	va_list arg_list;

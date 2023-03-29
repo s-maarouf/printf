@@ -49,5 +49,8 @@ int print_number(va_list args);
 int hex_check(int num, char x);
 char *rev_string(char *s);
 int _putchar_buff(char c);
+void print_plus(int num, int *len);
+void print_space(int num, int *len);
+void print_prefix(int num, char c, int *len);
 
 #endif
