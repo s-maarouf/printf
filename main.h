@@ -11,6 +11,8 @@
 
 /**
 * struct convert - defines a structure for symbols and functions containing prototypes and conversion specifiers
+* struct convert - defines a structure for symbols and functions containing
+prototypes and conversion specifiers
 *
 * @sym: The operator
 * @f: The function associated
