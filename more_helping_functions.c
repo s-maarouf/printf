@@ -2,7 +2,7 @@
 
 /**
  * rot13 - Converts string to rot13
- * @list: string to convert
+ * @list: string intoto convert
  * Return: converted string
  */
 int rot13(va_list list)
