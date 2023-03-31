@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
-
  * _print_char - Prints a single character
  * @list: list of arguments
  *
