@@ -6,7 +6,7 @@
  * @c: input character to print
  *
  * Return: character to print
- *
+ */
 
 int _putchar(char c)
 {
