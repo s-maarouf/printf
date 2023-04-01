@@ -10,7 +10,8 @@
 #define BUFFER_SIZE 1024
 
 /**
-* struct convert - defines a structure for symbols and functions
+* struct convert - defines a structure for symbols and functions containing
+*		prototypes and conversion specifiers
 *
 * @sym: The operator
 * @f: The function associated

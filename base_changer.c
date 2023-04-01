@@ -2,6 +2,7 @@
 
 /**
 * print_binary - converts an unsigned int to binary and prints it
+*
 * @list: arguments list containing the unsigned int to be converted
 *
 * Return: number of characters printed
@@ -43,7 +44,9 @@ int print_binary(va_list list)
 
 /**
 * print_hex - Prints a representation of a decimal number on base16 lowercase
+*
 * @list: List of the arguments passed to the function
+*
 * Return: Number of characters printed
 */
 int print_hex(va_list list)
@@ -89,7 +92,9 @@ int print_hex(va_list list)
 
 /**
 * print_heX - Prints a representation of a decimal number on base16 Uppercase
+*
 * @list: List of the arguments passed to the function
+*
 * Return: Number of characters printed
 */
 int print_heX(va_list list)
@@ -134,8 +139,10 @@ int print_heX(va_list list)
 
 /**
 * hex_check - Checks which hex function is calling it
+*
 * @num: Number to convert into letter
 * @x: Tells which hex function is calling it
+*
 * Return: Ascii value for a letter
 */
 int hex_check(int num, char x)
@@ -153,7 +160,9 @@ int hex_check(int num, char x)
 
 /**
  * print_octal - Prints the numeric representation of a number in octal base
+ *
  * @list: List of all the arguments passed to the program
+ *
  * Return: Number of symbols printed to stdout
  */
 int print_octal(va_list list)

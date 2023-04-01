@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _printf - Prints formatted output to stdout
- *_printf - Emulates the original
+ * _printf - A function that reproduce the behaviour of printf
+ *
  * @format: A string containing zero or more format specifiers
  *
  * Return: The number of characters printed (excluding the null byte used to

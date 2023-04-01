@@ -4,6 +4,7 @@
  * rev_string - reverses a string in place
  *
  * @s: string to reverse
+ *
  * Return: A pointer to a character
  */
 char *rev_string(char *s)
@@ -52,6 +53,7 @@ unsigned int base_len(unsigned int num, int base)
 
 /**
  * print_pointer - prints a pointer's memory address in hexadecimal notation
+ *
  * @list: argument list containing the pointer to be printed
  *
  * Return: number of characters printed
@@ -69,7 +71,9 @@ int print_pointer(va_list list)
 
 /**
  * print_reversed - Calls a function to reverse and print a string
+ *
  * @arg: Argument passed to the function
+ *
  * Return: The amount of characters printed
  */
 int print_reversed(va_list arg)

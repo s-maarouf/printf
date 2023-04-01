@@ -2,7 +2,9 @@
 
 /**
  * rot13 - Converts string to rot13
+ *
  * @list: string intoto convert
+ *
  * Return: converted string
  */
 int rot13(va_list list)
@@ -34,6 +36,7 @@ int rot13(va_list list)
 
 /**
  * print_S - prints a string with non-printable characters in hex format
+ *
  * @list: arguments list containing the string to be printed
  *
  * Return: number of characters printed
@@ -66,7 +69,9 @@ int print_S(va_list list)
 
 /**
  * _putchar_buff - uses a local buffer of 1024 to call write
+ *
  * @c: character to print
+ *
  * Return: 1 on success. else return -1
  */
 
