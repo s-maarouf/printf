@@ -1,10 +1,10 @@
 # PRINTF
 
 ## About this project:
-This is a project to be done in a group of two people.
-The goal is to reproduce the same behaviour of `printf` and handle all kind of formats.
+This is a project to be done in a group of two people.<br>
+The goal is to reproduce the same behaviour of `printf` and handle all kind of formats.<br>
 There should be one project repository per group. The other members do not fork or clone the project to ensure only one of the team has the repository in their github account otherwise you risk scoring 0%
-
+<br>
 ## Authorized functions and macros:
 ```
 write
@@ -15,7 +15,7 @@ va_end
 va_copy
 va_arg
 ```
-
+<br>
 ## Compilation:
 The code is compiled this way:
 ```sh
@@ -101,7 +101,7 @@ Unknown:[%r]
 Unknown:[%r]
 alex@ubuntu:~/c/printf$
 ```
-
+<br>
 ## Tasks:
 
 ### 0) I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
@@ -117,14 +117,14 @@ Write a function that produces output according to a format.
 	* `%`
 * You don’t have to reproduce the buffer handling of the C library printf function.
 * You don’t have to handle the flag characters/field width/precision/length modifiers.
-
+<br>
 ### 1) Education is when you read the fine print. Experience is what you get if you don't
 
 Handle the following conversion specifiers:
 * `d`
 * `i`
 * You don’t have to handle the flag characters/field width/precision/length modifiers.
-
+<br>
 ### 2) With a face like mine, I do better in print
 
 Handle the following custom conversion specifiers:
@@ -153,7 +153,7 @@ alex@ubuntu:~/c/printf$ ./a.out
 1100010
 alex@ubuntu:~/c/printf$
 ```
-
+<br>
 ### 3) What one has not experienced, one will never understand in print
 
 Handle the following conversion specifiers:
@@ -162,11 +162,11 @@ Handle the following conversion specifiers:
 * `x`
 * `X`
 * You don’t have to handle the flag characters/field width/precision/length modifiers.
-
+<br>
 ### 4) Nothing in fine print is ever good news
 
 Use a local buffer of 1024 chars in order to call `write` as little as possible.
-
+<br>
 ### 5) My weakness is wearing too much leopard print
 
 Handle the following custom conversion specifier:
@@ -195,53 +195,82 @@ alex@ubuntu:~/c/printf$ ./a.out
 Best\x0ASchool
 alex@ubuntu:~/c/printf$
 ```
-
+<br>
 ### 6) How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print
 
 Handle the following conversion specifier:
 * `p`.
 * You don’t have to handle the flag characters/field width/precision/length modifiers.
-
+<br>
 ### 7) The big print gives and the small print takes away
 
 Handle the following flag characters for non-custom conversion specifiers:
 * `+`
 * space
 * `#`
-
+<br>
 ### 8) Sarcasm is lost in print
 
 Handle the following length modifiers for non-custom conversion specifiers:
 * `l`
 * `h`
 Conversion specifiers to handle: `d`, `i`, `u`, `o`, `x`, `X`
-
+<br>
 ### 9) Print some money and give it to us for the rain forests
 
 Handle the field width for non-custom conversion specifiers.
-
+<br>
 ### 10) The negative is the equivalent of the composer's score, and the print the performance
 
 Handle the precision for non-custom conversion specifiers.
-
+<br>
 ### 11) It's depressing when you're still around and your albums are out of print
 
 Handle the `0` flag character for non-custom conversion specifiers.
-
+<br>
 ### 12) Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
 
 Handle the `-` flag character for non-custom conversion specifiers.
-
+<br>
 ### 13) Print is the sharpest and the strongest weapon of our party
 
 Handle the following custom conversion specifier:
 * `r`: prints the reversed string
-
+<br>
 ### 14) The flood of print has turned reading into a process of gulping rather than savoring
 
 Handle the following custom conversion specifier:
 * `R`: prints the rot13'ed string
-
+<br>
 ### 15) *
 
 All the above options work well together.
+<br>
+<br>
+<br>
+<br>
+
+## Author's notes:
+
+This project was made by @s-maarouf and @oyindoubra
+
+**The project is not 100% complete we couldn't handle everything!**
+
+Here are the completed tasks:
+- [0](https://github.com/s-maarouf/printf#0-im-not-going-anywhere-you-can-print-that-wherever-you-want-to-im-here-and-im-a-spur-for-life)
+- [1](https://github.com/s-maarouf/printf#1-education-is-when-you-read-the-fine-print-experience-is-what-you-get-if-you-dont)
+- [2](https://github.com/s-maarouf/printf#2-with-a-face-like-mine-i-do-better-in-print)
+- [3](https://github.com/s-maarouf/printf#3-what-one-has-not-experienced-one-will-never-understand-in-print)
+- [4](https://github.com/s-maarouf/printf#4-nothing-in-fine-print-is-ever-good-news)
+- [5](https://github.com/s-maarouf/printf#5-my-weakness-is-wearing-too-much-leopard-print)
+- [6](https://github.com/s-maarouf/printf#6-how-is-the-world-ruled-and-led-to-war-diplomats-lie-to-journalists-and-believe-these-lies-when-they-see-them-in-print)
+- [7](https://github.com/s-maarouf/printf#7-the-big-print-gives-and-the-small-print-takes-away)
+- [8](https://github.com/s-maarouf/printf#8-sarcasm-is-lost-in-print)
+- [9](https://github.com/s-maarouf/printf#9-print-some-money-and-give-it-to-us-for-the-rain-forests)
+- [10](https://github.com/s-maarouf/printf#10-the-negative-is-the-equivalent-of-the-composers-score-and-the-print-the-performance)
+- [11](https://github.com/s-maarouf/printf#11-its-depressing-when-youre-still-around-and-your-albums-are-out-of-print)
+- [12](https://github.com/s-maarouf/printf#12-every-time-that-i-wanted-to-give-up-if-i-saw-an-interesting-textile-print-what-ever-suddenly-i-would-see-a-collection)
+- [13](https://github.com/s-maarouf/printf#13-print-is-the-sharpest-and-the-strongest-weapon-of-our-party)
+- [14](https://github.com/s-maarouf/printf#14-the-flood-of-print-has-turned-reading-into-a-process-of-gulping-rather-than-savoring)
+- [15](https://github.com/s-maarouf/printf#15-)
+
